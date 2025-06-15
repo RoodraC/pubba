@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Father's Day!</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #2c3e50, #4ca1af);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      position: relative;
+      width: 90%;
+      max-width: 1200px;
+      height: 90%;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .title {
+      font-size: 3em;
+      color: #fff;
+      text-align: center;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .quote {
+      font-size: 1.5em;
+      color: #d0eaff;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      padding: 30px;
+      color: #fff;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(10px);
+    }
+
+    .card p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .signature {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 1.1em;
+      color: #b3e5fc;
+    }
+
+    .animation-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .animation-bg span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: rgba(255,255,255,0.2);
+      animation: move 15s linear infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes move {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+      }
+    }
+
+    .music-player {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    .music-player audio {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Happy Father's Day 👔</div>
+    <div class="quote">"A father is someone you look up to no matter how tall you grow."</div>
+    <div class="card">
+      <h2>Dear Pubba,</h2>
+      <p>
+        Thank you for all the countless things, love, and support you have given me. You have always been my guiding light and I love you so much!
+      </p>
+      <div class="signature">— With all my love, Betu</div>
+    </div>
+    <div class="music-player">
+      <audio controls autoplay loop>
+        <source src="./Record (online-voice-recorder.com) (2).mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="animation-bg">
+      <!-- Generate 100 floating elements -->
+      <script>
+        for (let i = 0; i < 100; i++) {
+          const span = document.createElement('span');
+          span.style.left = Math.random() * 100 + '%';
+          span.style.top = Math.random() * 100 + '%';
+          span.style.animationDuration = (10 + Math.random() * 20) + 's';
+          span.style.width = span.style.height = (5 + Math.random() * 15) + 'px';
+          document.querySelector('.animation-bg').appendChild(span);
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
